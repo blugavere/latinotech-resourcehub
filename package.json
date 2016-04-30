@@ -1,0 +1,15 @@
+{
+  "name": "training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "angularTest.js",
+  "dependencies": {
+    "lite-server": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "author": "",
+  "license": "ISC"
+}
