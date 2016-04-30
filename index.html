@@ -1,13 +1,40 @@
 <html>
 <head>
+  <meta charset="utf-8">
+  <title>LSA | Official Site</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body ng-app="app" ng-controller="index as vm">
+<body ng-app="app">
+
+  <div class="navbar navbar-default" role="navigation" data-ng-controller="HeaderController">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" ui-sref="home" lx-ripple="black"><i class="fa fa-home"></i></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+        <ul class="nav navbar-nav">
+          <li ng-class="{ active: isActive('/')}" lx-ripple><a ui-sref="home" lx-ripple="black">Home</a></li>
+          <li ng-class="{ active: isActive('/contact')}"><a ui-sref="resources" lx-ripple="black">Resources</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
 
 
-<h1>{{vm.title}}</h1>
-<!--  <div ng-app="behance" ng-controller="IndexCtrl as vm">
-    <p></p>
-  </div>-->
+  <div ui-view=""></div>
 
 
 
@@ -15,16 +42,25 @@
 
 
 
-
-
-
-
-
-
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-  <!--<script src="module.js"></script>
-  <script src="behance.js"></script>-->
-  <script src="modules/app.js"></script>
+  <script src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+
+  <script src="scripts/components/services/lsa.service.js"></script>
+  <script src="scripts/modules/app.js"></script>
+
+
+  <script src="scripts/modules/index/index.module.js"></script>
+  <script src="scripts/modules/index/controllers/index.ctrl.js"></script>
+
+  <script src="scripts/modules/resources/resources.module.js"></script>
+  <script src="scripts/modules/resources/controllers/resources.ctrl.js"></script>
+
+
 </body>
 
 </html>
