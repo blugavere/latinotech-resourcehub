@@ -4,7 +4,7 @@
 
   angular.module('resources.module',
   [
-    //'lsa.service'
+    'lsa.service'
   ])
   .config(function($stateProvider) {
     $stateProvider
@@ -13,7 +13,17 @@
         controller:'ResourcesCtrl',
         templateUrl: '/scripts/modules/resources/views/index.html',
         controllerAs: 'vm'
-      });
+      })
+      .state('details', {
+        url: '/details/:id',
+        controller:'DetailsCtrl',
+        templateUrl: '/scripts/modules/resources/views/details.html',
+        controllerAs: 'vm'
+      })
+
+
+
+      ;
   });
 
 })();

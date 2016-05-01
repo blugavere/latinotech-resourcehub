@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href=/style.css rel="stylesheet">
 </head>
-<body ng-app="app">
+<body>
 
   <div class="navbar navbar-default" role="navigation" data-ng-controller="HeaderController">
     <div class="container">
@@ -19,8 +20,15 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" ui-sref="home" lx-ripple="black"><i class="fa fa-home"></i></a>
+        <a class="navbar-brand" ui-sref="home" lx-ripple="black">
+        <i class="fa fa-home"></i>
+        <!--<img ng-src="https://pbs.twimg.com/profile_images/606848367394578432/rZ0DYagq_200x200.jpg">
+        --></a>
       </div>
+
+
+<!--
+https://pbs.twimg.com/profile_images/606848367394578432/rZ0DYagq_200x200.jpg-->
 
       <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
@@ -48,7 +56,13 @@
   <script src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(function(){
+      angular.bootstrap(document.body, ['app']);
+    });
+  </script>
 
   <script src="scripts/components/services/lsa.service.js"></script>
   <script src="scripts/modules/app.js"></script>
@@ -59,7 +73,7 @@
 
   <script src="scripts/modules/resources/resources.module.js"></script>
   <script src="scripts/modules/resources/controllers/resources.ctrl.js"></script>
-
+  <script src="scripts/modules/resources/controllers/details.ctrl.js"></script>
 
 </body>
 

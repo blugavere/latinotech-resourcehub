@@ -3,10 +3,7 @@
     <div class="col-md-12 headline">
         <h2>Cilent Resources</h2>
         <p>Here is a list of resources for you.</p>
-      <br>
-
-     <!--<a ui-sref="admin.add">Add</a></li>-->
-
+      <br/>
     <div class="input-group">
     <span class="input-group-addon">
         <i class="fa fa-search"></i>
@@ -16,21 +13,19 @@
   </div>
 </div>
 <div class="row">
-
     <div class="col-md-10 col-md-offset-1">
 
-    <ul style="padding-top:30px;" >
-      <li ng-repeat="(key, value) in vm.products | fuzzy: search | orderBy:'group' | groupBy: 'group'">
+    <ul style="padding-top:30px;">
+      <li ng-repeat="(key, value) in vm.data | fuzzy: search | orderBy:'category' | groupBy: 'category'">
         {{ key }}
-        <ul >
-          <li ng-repeat="product in value | fuzzy: search | orderBy:'name'" style="margin-left:30px;">
-            <a target="_blank" href="{{product.url}}">{{product.name}}</a> – {{product.description}}
+        <ul>
+          <li ng-repeat="res in value | fuzzy: search | orderBy:'rating':true">
+            <a ui-sref="details(res)">{{res.organization}}</a> – <label>Avg Rating:</label> {{res.rating}} - {{res.shortdescription}}
           </li>
         </ul>
       </li>
     </ul>
 
     </div>
-
   </div>
 </div>

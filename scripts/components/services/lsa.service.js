@@ -39,17 +39,34 @@ function service($http, TOKEN) {
     $http.jsonp('https://spreadsheets.google.com/feeds/list/' + key + '/od6/public/values?alt=json-in-script&callback=JSON_CALLBACK').then(function(res){
       console.log(res);
     });
-  */
 
-    $http.jsonp('https://spreadsheets.google.com/feeds/list/' + key + '/2/public/values?alt=json-in-script&callback=JSON_CALLBACK').then(function(res){
-      console.log('Worksheet 3: Community Resources', res.data.feed);
-      console.log('Data', res.data.feed.entry);
+  *///obdoywi = contats
+  //ob8ymcb = main tab
+//ofsas4n
+
+  this.communityResources = function(){
+    return $http.jsonp('https://spreadsheets.google.com/feeds/list/' + key + '/od6/public/values?alt=json-in-script&callback=JSON_CALLBACK');
+  }
+  this.communityResourceDetails = function(id){
+    return $http.jsonp('https://spreadsheets.google.com/feeds/list/' + key + '/od6/public/values?sq=id=' + id + '&alt=json-in-script&callback=JSON_CALLBACK');  
+  }
+  this.communityResourceReviews = function(id){
+    return $http.jsonp('https://spreadsheets.google.com/feeds/list/' + key + '/ofsas4n/public/values?sq=communityresourceid=' + id + '&alt=json-in-script&callback=JSON_CALLBACK');  
+  }
+
+
+
+
+  /*
+  $http.jsonp('https://spreadsheets.google.com/feeds/list/' + key + '/2/public/values?alt=json-in-script&callback=JSON_CALLBACK').then(function(res){
+    console.log('Worksheet 3: Community Resources', res.data.feed);
+    console.log('Data', res.data.feed.entry);
+  });
+
+    $http.jsonp('https://spreadsheets.google.com/feeds/worksheets/1D9b1ywfmKX2pqyQjtJZQfOq64mYRs1KTgt5TO1WyXL0/private/full').then(function(res){
+      console.log('Schema', res.data.feed);
     });
-
-      $http.jsonp('https://spreadsheets.google.com/feeds/worksheets/1D9b1ywfmKX2pqyQjtJZQfOq64mYRs1KTgt5TO1WyXL0/private/full').then(function(res){
-        console.log('Schema', res.data.feed);
-      });
-
+  */
 
 
 }

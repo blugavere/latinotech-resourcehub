@@ -1,0 +1,53 @@
+<div class="container" ng-cloak>
+  <div class="row">
+    <div class="col-md-12">
+      <header>
+        <h1 class="h1">{{vm.data.organization}}</h1>
+        <h5><label>Average Rating: </label> {{vm.averageRating()}} / 5   <br/><label> # of Ratings: </label> {{vm.reviews.length}}</h3>
+        <hr/>
+      </header>
+
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <label>Services: </label>
+          <p>{{vm.data.services}}</p>
+
+          <label>Cost/Eligibility: {{vm.data.cost}}</label>
+          <p>{{vm.data.eligibility}}</p>
+
+          <label>Point Person: </label>
+          <p>{{vm.data.pointperson}}</p>
+
+          <label>Notes: </label>
+          <p>{{vm.data.notes}}</p>
+          
+        </div>
+        <div class="col-md-6">
+          <div id="piechart" style="width: 450px; height: 250px;"></div>
+        </div>
+      </div>
+      
+
+      <label>Phone: </label>
+      <input type="text" class="form-control" value="{{vm.data.phone}}" readonly>
+
+      <br/>
+
+      <label>Address: </label>
+      <input type="text" class="form-control" value="{{vm.data.address}}" readonly>
+
+      <br/>
+
+      <label>Experiences: </label>
+      <div class="thumbnail" ng-repeat="review in vm.reviews">
+        <div><label>Rating: </label> {{review.rating}} stars</div>
+        <label> Review: </label>
+        <p>{{review.content}}</p>
+      </div>
+
+
+    </div>
+  </div>
+</div><!--container end-->
