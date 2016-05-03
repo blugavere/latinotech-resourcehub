@@ -1,8 +1,8 @@
 {
-  "name": "training",
+  "name": "resourcehub",
   "version": "1.0.0",
   "description": "",
-  "main": "angularTest.js",
+  "main": "scripts/modules/app.js",
   "dependencies": {
     "lite-server": "^2.2.0"
   },
