@@ -2,8 +2,7 @@
 
   'use strict';
 
-  angular.module('resources.module',
-  [
+  angular.module('resources.module', [
     'lsa.service'
   ])
   .config(function($stateProvider) {
@@ -19,11 +18,7 @@
         controller:'DetailsCtrl',
         templateUrl: '/scripts/modules/resources/views/details.html',
         controllerAs: 'vm'
-      })
-
-
-
-      ;
+      });
   });
 
 })();

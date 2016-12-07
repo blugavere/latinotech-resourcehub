@@ -4,11 +4,12 @@
   "description": "",
   "main": "scripts/modules/app.js",
   "dependencies": {
+    "express": "^4.14.0",
     "lite-server": "^2.2.0"
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "lite-server"
+    "dev": "node src/server"
   },
   "author": "",
   "license": "ISC"

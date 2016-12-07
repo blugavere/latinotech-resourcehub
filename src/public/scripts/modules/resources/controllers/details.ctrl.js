@@ -1,14 +1,6 @@
 (function() {
 
 'use strict';
-/*jshint latedef: false */
-/**
- * @ngdoc function
- * @name benLugavereApp.controller:LibraryCtrl
- * @description
- * # LibraryCtrl
- * Controller of the benLugavereApp
- */
 
 angular.module('resources.module')
   .controller('DetailsCtrl', Controller);
@@ -22,7 +14,6 @@ angular.module('resources.module')
     console.log($stateParams);
 
     LSAService.communityResourceDetails($stateParams.id).then(function(response){
-      //console.log(response);
       var feed = response.data.feed.entry[0];
       console.log('details', feed);
       vm.data = {

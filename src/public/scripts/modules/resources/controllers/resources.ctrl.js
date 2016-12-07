@@ -1,14 +1,9 @@
+
 (function() {
 
 'use strict';
+
 /*jshint latedef: false */
-/**
- * @ngdoc function
- * @name benLugavereApp.controller:LibraryCtrl
- * @description
- * # LibraryCtrl
- * Controller of the benLugavereApp
- */
 
 angular.module('resources.module')
   .controller('ResourcesCtrl', Controller);
@@ -33,13 +28,8 @@ angular.module('resources.module')
 
           };
           vm.data.push(temp);
-        });
-
-      //vm.data = res.data.feed.entry;
-
-      //console.log(vm.data[0]);
-      //console.log(vm.data);
-      
+        });      
     });
   }
+
 })();
