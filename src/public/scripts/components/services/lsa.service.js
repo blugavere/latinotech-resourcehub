@@ -12,7 +12,7 @@ service.$inject = ['$http'];
 function service($http) {
   var service = this;
 
-  var key = '1D9b1ywfmKX2pqyQjtJZQfOq64mYRs1KTgt5TO1WyXL0';
+  var key = 'INSERT KEY HERE';
 
   this.communityResources = function(){
     return $http.jsonp('https://spreadsheets.google.com/feeds/list/' + key + '/od6/public/values?alt=json-in-script&callback=JSON_CALLBACK');
